@@ -6,15 +6,17 @@ export default class NestedIndexSet {
         const delta = max - min;
         const mid = Math.round(delta / 2);
         const index = min + mid;
-        return new NestedIndexSet(min, max, index);
+        return new NestedIndexSet(min, index, max);
     }
 
     constructor(
         public readonly min: number,
-        public readonly max: number,
         public index: number,
+        public readonly max: number,
     ) {
-        // TODO: Bounds checking
+        if (min >= index || index >= max) {
+            throw new RangeError(`index not in [min..max]`);
+        }
     }
 
     above(): NestedIndexSet {

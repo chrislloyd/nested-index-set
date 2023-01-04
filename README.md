@@ -47,11 +47,11 @@ All indexes that depend on `z` are guarenteed to still work as intended.
 // previously:
 // --menu-z-index: 998;
 // --menu-z-index: 999;
-const menu = new NestedIndexSet(0, 998, 998); // index=9999
-const modal = new NestedIndexSet(999, 2147483647, 999); // index=9999
+const menu = new NestedIndexSet(0, 998, 999); // index=999
+const modal = new NestedIndexSet(998, 999, 2147483647); // index=9999
 ```
 
-If you start off by expressing the values in this way, you can then incrementally update your site to use a more expressive setup like in the previous example.
+If you start off by expressing the values in this way, you can then incrementally update your site to use a more expressive setup like in the previous example. `menu.max` and `modal.index` being the same value is a good hint that those indexes are defined in terms of one another.
 
 ### Static vs. Dynamic
 
