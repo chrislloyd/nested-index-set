@@ -19,7 +19,7 @@ Reference:
 
 ## Contributing
 
-<!-- TODO: Contributing  -->
+I (@chrislloyd) have minimal time to dedicate to open source contributors. This package is provided "as is" and is primarily intended for my own benefit. PRs are welcome, feature requests are not.
 
 Reference:
 * [Development Containers](https://containers.dev)
