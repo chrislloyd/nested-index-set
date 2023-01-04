@@ -59,7 +59,7 @@ There's nothing about NestedIndexSet that _requires_ static usage (i.e. values c
 
 ## Background
 
-NestedIndexSets are inspired by [Nested Sets](https://en.wikipedia.org/wiki/Nested_set_model) from relational databases. By capturing the bounds of an index, it lets us specify `z-index` values as a tree rather than global magic variables.
+NestedIndexSets are inspired by Nested Sets from relational databases. By capturing the bounds of an index, it lets us specify `z-index` values as a tree rather than global magic variables.
 
 ```
                below                             above
@@ -73,6 +73,10 @@ There are other ways of capturing these relationships but they either:
 
 * Don't guarentee uniqueness (i.e. two elements can occupy the same index)
 * Aren't available statically
+
+Reference:
+* [Nested sets model](https://en.wikipedia.org/wiki/Nested_set_model)
+* [Managing zIndex in React](https://medium.com/@AsTexKG/managing-zindex-in-react-248f96eb1970)
 
 ## Contributing
 
