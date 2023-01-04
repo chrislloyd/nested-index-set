@@ -1,11 +1,14 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# typescript check
+# check npm lockfile
+npm ci
+
+# check types
 npx tsc --noEmit
 
-# npm package integration test
-# finds errors in the package.json configuration (main, type export etc.)
+# check npm package.json
+# finds errors in the configuration (main, type export etc.)
 {
     package="$PWD/$(npm pack)"
     tmpdir=$(mktemp -d)
