@@ -1,7 +1,7 @@
 # Nested Index Set
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://github.com/codespaces/new?hide_repo_select=true&ref=main&repo=584865046)
+Remove CSS z-index magic numbers with nested index sets.
 
-<!-- TODO: Description -->
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://github.com/codespaces/new?hide_repo_select=true&ref=main&repo=584865046)
 
 ## Installation
 
@@ -15,13 +15,14 @@ Reference:
 
 ## Usage
 
-`NestedIndexSet` is intended to model a CSS `z-index` domain. They let you statically capture relationships between indexes without having to dynamically create indexes. A basic example is figuring out a `z-index` for a Modal. Using a fixed number (i.e. `999`) doesn't capture the intent that it should sit _above_ other element's on the page. For example:
+`NestedIndexSet` is a better model for CSS `z-index`. Instead of just having a large list of magic numbers, `NestedIndexSet` lets you capture relationships between your elements. Nested index sets are are easy to change without breaking unrelated parts of your site - you can guarentee that the menu always shows above a modal, even if the modal changes.
+
+A basic example is figuring out a `z-index` for a Modal. Using a fixed number (i.e. `999`) doesn't capture the intent that it should sit _above_ other element's on the page. For example:
 
 ```tsx
 import NestedIndexSet from '@chrislloyd/nested-index-set';
 
-// The min/max values are the (approximate) values of CSS' integer types. See
-// https://stackoverflow.com/questions/491052/minimum-and-maximum-value-of-z-index
+// The min/max values are the (approximate) values of CSS' integer types.
 const page = NestedIndexSet.fromRange(-2147483648, 2147483647); // index=0
 
 export const z = page.above(); // index=1073741824
@@ -75,8 +76,9 @@ There are other ways of capturing these relationships but they either:
 * Aren't available statically
 
 Reference:
+* [Minimum and maximum value of z-index](https://stackoverflow.com/questions/491052/minimum-and-maximum-value-of-z-index)
 * [Nested sets model](https://en.wikipedia.org/wiki/Nested_set_model)
-* [Managing zIndex in React](https://medium.com/@AsTexKG/managing-zindex-in-react-248f96eb1970)
+* [Managing zIndex in React](https://medium.com/@AsTexKG/managing-zindex-in-react-248f96eb1970) (an example of a dynamic z-index manager)
 
 ## Contributing
 

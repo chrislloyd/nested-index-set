@@ -1,6 +1,6 @@
 {
     "author": "Chris Lloyd <chris@chrislloyd.net> (https://chrislloyd.net)",
-    "description": "TODO",
+    "description": "Remove CSS z-index magic numbers with nested index sets",
     "devDependencies": {
         "typescript": "^4.9.4"
     },
