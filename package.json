@@ -1,0 +1,29 @@
+{
+    "author": "Chris Lloyd <chris@chrislloyd.net> (https://chrislloyd.net)",
+    "description": "TODO",
+    "devDependencies": {
+        "typescript": "^4.9.4"
+    },
+    "files": [
+        "README.md",
+        "lib/*",
+        "!lib/*.tsbuildinfo"
+    ],
+    "homepage": "https://github.com/chrislloyd/nested-index-set#readme",
+    "license": "MIT",
+    "main": "lib/NestedIndexSet.js",
+    "name": "@chrislloyd/nested-index-set",
+    "publishConfig": {
+        "registry": "https://npm.pkg.github.com"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/chrislloyd/nested-index-set.git"
+    },
+    "scripts": {
+        "build": "tools/build.sh",
+        "test": "tools/test.sh",
+        "prepublishOnly": "tools/prepublish.sh"
+    },
+    "version": "0.0.0"
+}

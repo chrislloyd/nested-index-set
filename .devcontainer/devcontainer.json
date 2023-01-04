@@ -1,0 +1,31 @@
+{
+	"customizations": {
+		"codespaces": {
+			"openFiles": [
+				"README.md",
+				"src/NestedIndexSet.ts"
+			],
+			"repositories": {
+				"chrislloyd/nested-index-set": {
+					"permissions": {
+						"packages": "read"
+					}
+				}
+			}
+		},
+		"vscode": {
+			"extensions": [
+				"github.vscode-pull-request-github"
+			],
+			"settings": {
+				"git.enableCommitSigning": true,
+				"typescript.tsdk": "./node_modules/typescript/lib"
+			}
+		}
+	},
+	"features": {
+		"ghcr.io/devcontainers/features/github-cli:1": {}
+	},
+	"image": "mcr.microsoft.com/devcontainers/javascript-node",
+	"updateContentCommand": ".devcontainer/update-content.sh"
+}
