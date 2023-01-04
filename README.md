@@ -76,7 +76,7 @@ There are other ways of capturing these relationships but they either:
 
 ## Contributing
 
-I (@chrislloyd) have minimal time to dedicate to open source contributors. This package is provided "as is" and is primarily intended for my own benefit. PRs are welcome, feature requests are not.
+I ([@chrislloyd](mailto:chris@chrislloyd.net)) have minimal time to dedicate to open source contributors. This package is provided "as is" and is primarily intended for my own benefit. PRs are welcome, feature requests are not.
 
 Reference:
 * [Development Containers](https://containers.dev)
