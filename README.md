@@ -1,8 +1,6 @@
 # Nested Index Set
 Remove CSS z-index magic numbers with nested index sets.
 
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://github.com/codespaces/new?hide_repo_select=true&ref=main&repo=584865046)
-
 ## Installation
 
 ```sh
@@ -79,6 +77,10 @@ Reference:
 * [Minimum and maximum value of z-index](https://stackoverflow.com/questions/491052/minimum-and-maximum-value-of-z-index)
 * [Nested sets model](https://en.wikipedia.org/wiki/Nested_set_model)
 * [Managing zIndex in React](https://medium.com/@AsTexKG/managing-zindex-in-react-248f96eb1970) (an example of a dynamic z-index manager)
+
+## Development
+
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://github.com/codespaces/new?hide_repo_select=true&ref=main&repo=584865046)
 
 ## Contributing
 
