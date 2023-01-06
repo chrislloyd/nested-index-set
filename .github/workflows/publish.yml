@@ -1,0 +1,16 @@
+name: publish
+on:
+  push:
+    tags:
+      - 'v*'
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      packages: write
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+      - run: npm ci
+      - run: npm config set '//npm.pkg.github.com/:_authToken' '${{ secrets.GITHUB_TOKEN }}'
+      - run: npm publish --access public --tag latest
